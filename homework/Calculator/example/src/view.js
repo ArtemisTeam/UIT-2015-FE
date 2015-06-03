@@ -1,5 +1,5 @@
 var KEYMAP = {49: 1, 50: 2, 51: 3, 52: 4, 53: 5, 54: 6, 55: 7, 56: 8, 57: 9, 48: 0, 189: 'minus', 187: 'equal', 191: 'divide', 13: 'equal', 67: 'c', 8: 'backspace'};
-var CHARACTERS = {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 0: 0, "plus": "+", "minus": "-", "mutiple": "*", "divide": "/", "equal": "=", "c": "c", "backspace": "<-"};
+var CHARACTERS = {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 0: 0, "plus": "+", "minus": "-", "mutiple": "*", "divide": "/", "lbrace": "(", "rbrace": ")", "equal": "=", "c": "c", "backspace": "<-"};
 
 var InputBox = React.createClass({
     render: function() {
@@ -71,6 +71,8 @@ var Calc = React.createClass({
       if(e.shiftKey){
         switch(e.keyCode){
           case 56: $('.btn-mutiple').click(); break;
+          case 57: $('.btn-lbrace').click(); break;
+          case 48: $('.btn-rbrace').click(); break;
           case 187: $('.btn-plus').click(); break;
           default: break;
         }
