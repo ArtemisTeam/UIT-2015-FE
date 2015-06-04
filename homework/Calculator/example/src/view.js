@@ -45,7 +45,7 @@ var Calc = React.createClass({
       if(e.target.innerText==CHARACTERS['equal']){
         var expr = this.state.data.join('');
         //console.log(expr);
-        this.setState({data: [Calculator.compute(expr)]});
+        this.setState({data: Calculator.compute(expr).toString().split('')});
         console.log(Calculator.compute(expr), expr);
       } else if(e.target.innerText==CHARACTERS['c']){
         this.setState({data: []});
